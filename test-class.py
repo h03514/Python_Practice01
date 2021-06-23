@@ -53,4 +53,4 @@ class File:
 f1 = File('data.txt')
 f1.openFile()
 data = f1.read()
-print(data)
+# print(data)
