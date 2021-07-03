@@ -14,6 +14,6 @@ class DBManager:
             print(asset)
 
 
-db_manager = DBManager('asset', 'Qvpei+1', '192.168.45.14', 'asset', '3306')
+db_manager = DBManager('asset', 'Qveei+1', '192.168.25.14', 'aSLset', '3306')
 
-db_manager.show_data('mAsset')
+# db_manager.show_data('mAsset')
