@@ -5,6 +5,13 @@ from flask_cors import CORS
 
 app = Flask(__name__)
 CORS(app)
+app.config['MYSQL_DATABASE_USER'] = 'asset'
+app.config['MYSQL_DATABASE_PASSWORD'] = 'QveT@iei+1'
+app.config['MYSQL_DATABASE_DB'] = 'asset'
+app.config['MYSQL_DATABASE_HOST'] = '192.168.2.14'
+app.config['MYSQL_DATABASE_PORT'] = '3307'
+
+mysql = MySQL(app)
 
 
 class DBManager:
@@ -14,14 +21,14 @@ class DBManager:
         self.cursor = self.mysql_connection.cursor()
 
     def show_data(self, table_name):
-        self.cursor.execute(f"Select * From {table_name}")
+        self.cursor.execute("Select * From {table_name}")
         values = self.cursor.fetchall()
         for asset in values:
             print(asset)
 
 
 db_manager = DBManager(
-    'asset', 'Qveei+1', '192.168.52.14', 'assdddsset', '3306')
+    'asset', 'QveT@iei+1', '192.168.2.14', 'asset', '3307')
 
 # db_manager.show_data('mAsset')
 
