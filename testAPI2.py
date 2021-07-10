@@ -15,9 +15,9 @@ api = Api(app)
 
 # Set database credentials in config.
 app.config['MYSQL_DATABASE_USER'] = 'asset'
-app.config['MYSQL_DATABASE_PASSWORD'] = 'Qsadi+1'
+app.config['MYSQL_DATABASE_PASSWORD'] = 'QveT@ipei+1'
 app.config['MYSQL_DATABASE_DB'] = 'asset'
-app.config['MYSQL_DATABASE_HOST'] = '192.1saf4'
+app.config['MYSQL_DATABASE_HOST'] = 'localhost'
 app.config['MYSQL_DATABASE_PORT'] = 3306
 
 mysql = MySQL(app)
@@ -37,7 +37,7 @@ def index():
     return render_template('test.html')
 
 
-@app.route('/users')
+@app.route('/users',methods=['GET'])
 def users():
     cur = mysql.connection.cursor()
     users = cur.execute('Select * From mAsset')
